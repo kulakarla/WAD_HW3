@@ -20,6 +20,7 @@ export default {
 
 <style scoped>
 .header{
+  margin-top: -3%;
   border-radius: 25px;
   display: flex;
   flex-direction: column;

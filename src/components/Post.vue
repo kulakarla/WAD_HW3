@@ -14,7 +14,9 @@
 
       </div>
       <div class = "postfooter">
-        <p>SIIATULEBLAIKNUPP</p>
+        <!--<img :src="require('@/assets/' +nation.drapeau)"/> -->
+        <img :src="require('@/assets/like.png')" v-on:click.prevent="increment" class="likepilt">
+        <p>Number of likes: {{ count }}</p>
 
       </div>
     </div>
@@ -36,10 +38,17 @@ export default {
   },
   data: function() {
     return {
+      count: 0
 
+    }
+  },
+  methods: {
+    increment () {
+      this.count++;
     }
   }
 }
+
 </script>
 
 <style scoped>
@@ -70,6 +79,11 @@ export default {
   margin-bottom: 1%;
   align-items: center;
 }
+.postfooter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .post > img + p{
   font-weight: bold;
 }
@@ -81,6 +95,11 @@ export default {
 .profilepic{
   height: 43px;
   width: 43px;
+}
+
+.likepilt{
+  height: 45px;
+  width: 40px;
 }
 
 img{
