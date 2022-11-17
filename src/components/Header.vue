@@ -1,0 +1,48 @@
+<template>
+  <div class = "header">
+    <h1>{{ titleText }}</h1>
+    <div class = "navmenu">
+      <a href="#">Home</a>
+      <a href="#">Sign Up</a>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "HeaderBox",
+  props:{
+    titleText: String
+  }
+}
+</script>
+
+
+<style scoped>
+.header{
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: darkgray;
+  padding-bottom: 20px;
+
+}
+
+a{
+  margin: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a:visited{
+  color: black;
+}
+
+h1{
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+
+</style>
