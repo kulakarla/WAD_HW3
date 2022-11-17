@@ -2,8 +2,8 @@
   <div class = "header">
     <h1>{{ titleText }}</h1>
     <div class = "navmenu">
-      <a href="#">Home</a>
-      <a href="#">Sign Up</a>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/signup">Singup</router-link>
     </div>
   </div>
 </template>
