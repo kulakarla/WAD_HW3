@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 
+
 export default createStore({
     strict: true,
 
@@ -39,7 +40,7 @@ export default createStore({
                 paragraph: "Prügilanõrgvesi ehk nõrgvesi on igasugune ladestatud jäätmetest läbi nõrguv vedelik, mis jääb prügilasse või voolab prügilast välja[1]."},
             {id: 9, profilepic: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/1200px-The_Pirate_Bay_logo.svg.png",
                 img: "",
-                date: "May 28, 2022",
+                date: "May 26, 2022",
                 paragraph: "Site's back up boys - Yours Truly"},
             {id: 10, profilepic: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
                 img: "",
@@ -63,6 +64,7 @@ export default createStore({
             return postListStuff
         },
     },
+
     mutations: {
     },
     actions: {
