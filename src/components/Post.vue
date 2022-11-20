@@ -16,7 +16,7 @@
       <div class = "postfooter">
         <!--<img :src="require('@/assets/' +nation.drapeau)"/> -->
         <img :src="require('@/assets/like.png')" v-on:click.prevent="increment" class="likepilt">
-        <p>Number of likes: {{ count }}</p>
+        <p>{{ count }} likes</p>
 
       </div>
     </div>
@@ -45,6 +45,9 @@ export default {
   methods: {
     increment () {
       this.count++;
+    },
+    reset (){
+      this.count = 0;
     }
   }
 }

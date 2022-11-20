@@ -1,8 +1,13 @@
 <template>
   <HeaderBox titleText="Homepage"/>
   <div v-for="post in postListStuff" :key="post.id" class="posts">
-    <PostEntity :postDate="post.date" :profilePic="post.profilepic" :postImage="post.img" :postParagraph="post.paragraph"></PostEntity>
+    <PostEntity ref="post"
+                :postDate="post.date"
+                :profilePic="post.profilepic"
+                :postImage="post.img"
+                :postParagraph="post.paragraph"></PostEntity>
   </div>
+  <button @click="resetCounters" class = "resetbutton">Reset Likes</button>
   <FooterBox />
 </template>
 
@@ -22,6 +27,12 @@ export default {
     postListStuff(){
       return this.$store.getters.postListStuff
     },
+  },
+  methods: {
+    resetCounters() {
+      this.$refs.post.forEach(p => p.reset());
+    }
+
   }
 }
 </script>
@@ -38,5 +49,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.resetbutton{
+  background-color: darkgray;
+  border-radius: 2%;
+  margin: 10px;
+  font-family: Avenir, Avenir, Helvetica, Arial, sans-serif;
 }
 </style>
